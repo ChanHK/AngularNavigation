@@ -1,5 +1,13 @@
 <div class="container">
-  <div class="textCon">
-    <div class="text">Product works</div>
+  <div class="textCon" *ngFor="let products of Products">
+    <div class="text">
+      {{ products.name }}
+    </div>
+    <div class="text">
+      {{ products.description }}
+    </div>
+    <a [routerLink]="['/product/', products.id]" class="btn btn-dark">
+      Check Product
+    </a>
   </div>
 </div>
